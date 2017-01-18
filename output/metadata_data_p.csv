@@ -1,0 +1,24 @@
+variables,type,unit,definition
+plot_id,character,NA,Name of the plot
+owner_id,character,NA,Organization in charge of plot monitoring (IRSTEA: National Research Institute of Science and Technology for Environment and Agriculture;  ONF: National Forest Service; PNVanoise: Vanoise National Park)
+management,character,NA,Type of management (MAN: managed forest ; UNM: unmanaged forest)
+year_first_mes,integer,year,Year of the first census
+N_census,integer,NA,Number of census
+area,numeric,Ha,Area of the plot
+x_min,integer,meter,Minimum value of the local x-axis
+x_max,numeric,meter,Maximum value of the local x-axis
+y_min,integer,meter,Minimum value of the local y-axis
+y_max,integer,meter,Maximum value of the local y-axis
+elevation,integer,meter,Elevation a.s.l.
+GPS_loc,character,NA,Plot location precision. GPS: differential gps measurement in the field ;  MAP: estimation of the position on a 1/25000 map
+x_lamb93,numeric,meter,x coordinate of the center of the plot (RGF93 EPSG 2154)
+y_lamb93,numeric,meter,y coordinate of the center of the plot (RGF93 EPSG 2154)
+x0_z,numeric,meter,local x coordinate of the reference point for elevation (z=0)
+y0_z,numeric,meter,local y coordinate of the reference point for elevation (z=0)
+lat,numeric,degree,Latitude of the center of the plot (WGS84 EPSG 4326)
+long,numeric,degree,Longitude of the center of the plot (WGS84 EPSG 4326)
+slope,numeric,degree,Slope of the plot extracted from a DEM (IGN 25m) 
+aspect,numeric,degree,Aspect of the plot extracted from a DEM (IGN 25m) 
+MAT,numeric,degree C,Mean annual temperature extracted from worldclim
+MAP,numeric,mm,Mean total annual precipitation extracted from worldclim
+geol,character,NA,Bedrock type extracted from BRGM France map

@@ -1,0 +1,10 @@
+variables,type,unit,Definition
+plot_id,character,NA,Name of the plot
+map_year,integer,year,"Year of tree coordinates (x,y) or quadrat measurements"
+tree_id,character,NA,Numeric identifier of the tree
+quadrat_id,integer,NA,Numeric identifier of the 0.25 ha quadrat (NA if not recorded)
+code_species,character,NA,Latin name of the tree species (see below for code meaning)
+x,numeric,meter,x local coordinate of the tree (NA if tree is not mapped)
+y,numeric,meter,y local coordinate of the tree  (NA if tree is not mapped)
+z,numeric,meter,"Elevation above a reference point. (x,y) local coordinates of the reference point can be found in the data_p.csv file"
+year_1m30,integer,year,Year at which the tree reached a height of 1.3m determined from a core sample at 1.3 m height 

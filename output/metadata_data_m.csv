@@ -1,0 +1,19 @@
+variables,type,unit,Definition
+mesure_id,character,NA,"Alphanumeric unique identifier of the measurement build by merging the last 2 numbers of census year, the name of the plot and the numeric identifier of the tree"
+plot_id,character,NA,Name of the plot
+year,numeric,year,Census year
+tree_id,character,NA,Numeric identifier of the tree
+code_status,character,NA,Tree status (see below for code meaning)
+code_diam,integer,NA,"Dbh measurement method (1: diameter tape; 2: caliper; NA: unknown)"
+dbh,numeric,centimeter,Dbh value
+h_tot,numeric,meter,Height value
+crown_h1,numeric,Meter,Height of the lowest large branch in the first direction (uphill side of the tree)
+crown_h2,numeric,Meter,Height of the lowest large branch in the second direction (left of the first direction)
+crown_h3,numeric,Meter,Height of the lowest large branch in the third direction (downhill side of the tree)
+crown_h4,numeric,Meter,Height of the lowest large branch in the fourth direction (right of the first direction)
+crown_r1,numeric,Meter,Radius of the lowest large branch on the first direction (uphill side of the tree)
+crown_r2,numeric,Meter,Radius of the lowest large branch on the second direction (left of the first direction)
+crown_r3,numeric,Meter,Radius of the lowest large branch on the third direction (downhill side of the tree)
+crown_r4,numeric,Meter,Radius of the lowest large branch on the fourth direction (right of the first direction)
+stratum,integer,NA,Tree stratum visually determined in reference to stand dominant height (H0): stratum 1 (3/4 H0 < h_tot =< H0); stratum 2 (1/2 H0 < h_tot =< 3/4 H0); stratum 3 (1/4 H0 < h_tot =< 1/2 H0); stratum 4 (h_tot =< 1/4 H0) 
+

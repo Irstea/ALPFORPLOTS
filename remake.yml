@@ -1,0 +1,92 @@
+packages:
+  - rmarkdown
+  - knitr
+  - maps
+  - parallel
+  - MASS
+  - quantreg
+  - splines
+  - bibtex
+
+sources:
+  - R
+
+targets:
+  all:
+    depends:
+      - manuscript
+      - data
+
+  manuscript:
+    depends:
+      - ms/metadata.html
+      - ms/metadata.docx
+
+
+  data:
+    depends:
+      - data_c
+      - data_m
+      - data_p
+      - df_growth
+      - output/table_plot.csv
+      - output/table_stand_descrip.csv
+      - output/table_stand_allo.csv
+      - output/species_code.csv
+      - output/status_code.csv
+      - output/metadata_data_p.csv
+      - output/metadata_data_m.csv
+      - output/metadata_data_c.csv
+
+
+  ms/metadata.md:
+    knitr:
+      chdir: true
+      auto_figure_prefix: true
+    packages:
+      - whisker
+    depends:
+      - data
+      - ms/refs.bib
+      - R/ms.R
+
+  data_c:
+    command:  get_data("output/data_c.csv")
+
+  data_m:
+    command:  get_data("output/data_m.csv")
+
+  data_p:
+    command:  get_data("output/data_p.csv")
+
+  output/data_sp_code.csv:
+    command: data_sp_code(data_c)
+
+  df_growth:
+    command: get_data('output/df_growth.csv')
+
+  output/df_growth.csv:
+    command: save_data_growth(data_m, data_c)
+
+  output/table_plot.csv:
+    command: table_plot(data_p)
+
+  output/table_stand_descrip.csv:
+    command: table_stand_descrip(data_p, data_m, data_c)
+
+  output/table_stand_allo.csv:
+    command: table_stand_allo(data_p, data_m, data_c)
+
+  ms/metadata.html:
+    command: render_html("ms/metadata.md")
+    quiet: true
+    depends:
+      - ms/metadata.Rmd
+
+  ms/metadata.docx:
+    command: render_doc("ms/metadata.md")
+    quiet: true
+    depends:
+      - ms/metadata.Rmd
+
+

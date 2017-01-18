@@ -1,0 +1,11 @@
+.httr-oauth
+*.docx
+*.html
+*.png
+ms/metadata.md
+wc0.5
+ms/figure
+GIS_data
+R/.Rhistory
+.Rhistory
+.remake/
